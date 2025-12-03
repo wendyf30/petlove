@@ -1,3 +1,4 @@
+/* ---------- COLOR PALETTE ---------- */
 :root {
     --yellow: #F6BD60;
     --cream: #F7EDE2;
@@ -7,83 +8,88 @@
     --text-dark: #2B2B2B;
 }
 
-/* ---------- GENERAL ---------- */
+/* ---------- GLOBAL ---------- */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--cream);
     color: var(--text-dark);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
 }
 
-/* ---------- HERO / HEADER ---------- */
+* {
+    transition: all 0.25s ease;
+}
+
+/* ---------- HERO SECTION ---------- */
 .hero {
     background-color: var(--yellow);
     text-align: center;
-    padding: 60px 20px;
-    color: var(--text-dark);
+    padding: 70px 20px;
+    border-bottom: 8px solid var(--pink);
 }
 
 .profile-pic {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    border: 6px solid white;
     object-fit: cover;
-    border: 5px solid white;
-    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
 }
 
 /* ---------- ABOUT SECTION ---------- */
 .about-section {
     background-color: var(--pink);
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .about-container {
     background-color: var(--teal);
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px;
-    border-radius: 16px;
+    padding: 35px;
+    border-radius: 18px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     color: white;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    margin-top: 0;
-    text-decoration: underline;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .about-photo {
     width: 200px;
     height: 200px;
-    border-radius: 12px;
+    border-radius: 14px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.05);
 }
 
 /* ---------- ANIMALS SECTION ---------- */
 .animals-section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-    background-color: var(--cream);
 }
 
 .animal-row {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .animal-card {
@@ -91,21 +97,28 @@ a {
     color: white;
     width: 260px;
     padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 18px;
     text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transform: translateY(0);
+}
+
+.animal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    background-color: #f79790;
 }
 
 .animal-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 10px;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
 }
 
-.animal-card h3 {
-    margin: 10px 0 5px;
+.animal-card:hover img {
+    transform: scale(1.05);
 }
 
 /* ---------- FOOTER ---------- */
@@ -114,4 +127,5 @@ a {
     padding: 20px;
     background-color: var(--yellow);
     color: var(--text-dark);
+    border-top: 8px solid var(--teal);
 }
