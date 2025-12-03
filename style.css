@@ -1,43 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Pet Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* COLOR PALETTE */
+:root {
+    --yellow: #F6BD60;
+    --cream: #F7EDE2;
+    --pink: #F5CAC3;
+    --teal: #84A59D;
+    --coral: #F28482;
+}
 
-<body>
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: #333;
+}
 
-    <!-- HEADER SECTION -->
-    <header class="header">
-        <img src="your-logo.png" alt="Logo" class="logo">
-        <h1 class="site-name">Your Name or Page Title</h1>
-    </header>
+/* HEADER (Like your screenshot) */
+.hero {
+    background-color: #2C64C5; /* screenshot blue */
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
 
-    <!-- ABOUT ME SECTION -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>
-            Write about yourself here! You can talk about why you love animals, 
-            what you do, your mission, or anything else.
-        </p>
-    </section>
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
 
-    <!-- ANIMALS SECTION -->
-    <section class="animals">
-        <h2>Animals</h2>
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 10px 0 5px;
+}
 
-        <!-- Animal Card Example (duplicate as needed) -->
-        <div class="animal-card">
-            <img src="animal1.jpg" alt="Animal" class="animal-photo">
-            <h3>Animal Name</h3>
-            <p>Short description or story about this animal.</p>
-        </div>
+/* ABOUT SECTION */
+.about-section {
+    background-color: #0D1E3A; /* darker blue like screenshot */
+    padding: 40px 20px;
+}
 
-        <!-- Add more animal-card divs when needed -->
+.about-container {
+    background-color: #2C64C5;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-    </section>
+.about-text {
+    flex: 1;
+    color: white;
+}
 
-</body>
-</html>
+.about-text h2 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+/* ABOUT ME PHOTO */
+.about-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* ANIMALS SECTION */
+.animals-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.animal-card {
+    background-color: var(--teal);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.animal-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.animal-card h3 {
+    margin: 5px 0;
+    color: var(--cream);
+}
